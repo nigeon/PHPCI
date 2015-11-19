@@ -35,13 +35,13 @@ class CopyBuild implements \PHPCI\Plugin
      */
     public function __construct(Builder $phpci, Build $build, array $options = array())
     {
-        $path                   = $phpci->buildPath;
-        $this->phpci            = $phpci;
-        $this->build            = $build;
-        $this->directory        = isset($options['directory']) ? $options['directory'] : $path;
-        $this->wipe             = isset($options['wipe']) ?  (bool)$options['wipe'] : false;
-        $this->ignore           = isset($options['respect_ignore']) ?  (bool)$options['respect_ignore'] : false;
-        $this->build_folder     = isset($options['build_folder']) ?  (bool)$options['build_folder'] : true;
+        $path               = $phpci->buildPath;
+        $this->phpci        = $phpci;
+        $this->build        = $build;
+        $this->directory    = isset($options['directory']) ? $options['directory'] : $path;
+        $this->wipe         = isset($options['wipe']) ?  (bool)$options['wipe'] : false;
+        $this->ignore       = isset($options['respect_ignore']) ?  (bool)$options['respect_ignore'] : false;
+        $this->build_folder = isset($options['build_folder']) ?  (bool)$options['build_folder'] : true;
     }
 
     /**
